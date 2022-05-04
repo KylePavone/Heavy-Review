@@ -34,7 +34,6 @@
               <a class="pagin" href="./titles?page={{ page }}">{{ page }}</a>
             </li>
         {% endfor %}
-
            <li {% if not pages.has_next %} class="page-item disabled" {% endif %}>
               <a class="pagin" href="./titles?page={{ pages.next_num }}" tabindex="-1" aria-disabled="true">></a>
             </li >
