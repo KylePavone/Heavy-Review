@@ -68,5 +68,5 @@ def themes():
 
 @articles.route('/latest')
 def latest():
-    articles = Articles.query.order_by(Articles.created.desc())
+    articles = Articles.query.order_by(Articles.created.desc())[0:3]
     return render_template('article/latest.html', articles=articles)

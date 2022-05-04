@@ -7,7 +7,22 @@
 
 
 {% block content %}
-    {% for art in articles %}
-        <p>{{ art.title }}</p>
-    {% endfor %}
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <div class="col-md-6 col-sm-12">
+                    <h1 class="latesttitle ">Недавно добавленные</h1>
+                    <hr>
+                </div>
+                {% for art in articles %}
+                    <div class="mb-4">
+                        <h2 class="titleel"><a href="{{ url_for('article.current_article', slug=art.slug) }}">{{ art.title }}</a></h2>
+                        <p class="subtitle">{{ art.subtitle }}</p>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
 {% endblock %}
