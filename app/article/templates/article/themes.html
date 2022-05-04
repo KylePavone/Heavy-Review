@@ -13,29 +13,29 @@
         {% for t in themes %}
             {% if t.name == 'News' %}
                 <div class="col-md-6 col-sm-12">
-                    <h2 class="mt-5"><a class="themetitle" href="#">{{ t.name }}</a></h2>
-                    <a href="#"><img class="themeimg" src="../static/media/news.jpeg"></a>
+                    <h2 class="mt-5"><a class="themetitle" href="{{ url_for('article.associated_articles', slug=t.slug) }}">{{ t.name }}</a></h2>
+                    <a href="{{ url_for('article.associated_articles', slug=t.slug) }}"><img class="themeimg" src="../static/media/news.jpeg"></a>
                 </div>
             {% endif %}
 
             {% if t.name == 'Post-Hardcore' %}
                 <div class="col-md-6 col-sm-12">
-                    <h2 class="mt-5"><a class="themetitle" href="#">{{ t.name }}</a></h2>
-                    <a href="#"><img class="themeimg" src="../static/media/posthardcore.jpeg"></a>
+                    <h2 class="mt-5"><a class="themetitle" href="{{ url_for('article.associated_articles', slug=t.slug) }}">{{ t.name }}</a></h2>
+                    <a href="{{ url_for('article.associated_articles', slug=t.slug) }}"><img class="themeimg" src="../static/media/posthardcore.jpeg"></a>
                 </div>
             {% endif %}
 
             {% if t.name == 'Metalcore' %}
                 <div class="col-md-6 col-sm-12">
-                    <h2 class="mt-5 "><a class="themetitle" href="#">{{ t.name }}</a></h2>
-                    <a href="#"><img class="themeimg" src="../static/media/metalcore.jpeg"></a>
+                    <h2 class="mt-5 "><a class="themetitle" href="{{ url_for('article.associated_articles', slug=t.slug) }}">{{ t.name }}</a></h2>
+                    <a href="{{ url_for('article.associated_articles', slug=t.slug) }}"><img class="themeimg" src="../static/media/metalcore.jpeg"></a>
                 </div>
             {% endif %}
 
             {% if t.name == 'Deathcore' %}
                 <div class="col-md-6 col-sm-12">
-                    <h2 class="mt-5"><a class="themetitle" href="#">{{ t.name }}</a></h2>
-                    <a href="#"><img class="themeimg" src="../static/media/deathcore.jpeg"></a>
+                    <h2 class="mt-5"><a class="themetitle" href="{{ url_for('article.associated_articles', slug=t.slug) }}">{{ t.name }}</a></h2>
+                    <a href="{{ url_for('article.associated_articles', slug=t.slug) }}"><img class="themeimg" src="../static/media/deathcore.jpeg"></a>
                 </div>
             {% endif %}
         {% endfor %}

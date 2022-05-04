@@ -63,5 +63,10 @@ def associated_articles(slug):
 @articles.route('/themes')
 def themes():
     themes = Themes.query.all()
-
     return render_template('article/themes.html', themes=themes)
+
+
+@articles.route('/latest')
+def latest():
+    articles = Articles.query.order_by(Articles.created.desc())
+    return render_template('article/latest.html', articles=articles)
