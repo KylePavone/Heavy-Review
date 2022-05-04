@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ article.title }}
+{% endblock %}
+
+
+{% block content %}
+<main>
+    <div class="container mt-4 wholetitle">
+        <div class="row">
+            <div class="col-md-8 col-sm-12">
+                <div class="col-md-12 col-sm-12 mt-3 mb-5">
+                <h1 class="maintitle">{{ article.title }}</h1>
+                <h5 class="maintitle">{{ article.subtitle }}</h5>
+                <p>Опубликовано: {{ article.created }}</p>
+                <p>Тэги:</p>
+                {% for theme in themes %}
+                    <div class="mb-2">
+                        <a class="tags" href="{{ url_for('article.associated_articles', slug=theme.slug ) }}">{{ theme.name }}</a><br>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="col-md-12 col-sm-12">
+                <img class="innerimg" src="{{ article.first_image }}" alt="">
+            </div>
+            <div class="maintext col-md-12 col-sm-12 mt-5">
+                {{ article.first_chapter }}
+            </div>
+            <div class="col-md-12 col-sm-12 mt-5">
+                <img class="innerimg" src="{{ article.third_image }}" alt="">
+            </div>
+            <div class="maintext col-md-12 col-sm-12 mt-5">
+                <p>{{ article.second_chapter }}</p>
+            </div>
+            <div class="col-md-12 mb-5 mt-5 col-sm-12 mt-5 ">
+              <iframe class="youtube" height="310px" src="{{ article.video }}"
+              title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;
+              clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="maintext col-md-12 col-sm-12 mt-5">
+                <p>{{ article.third_chapter }}</p>
+            </div>
+            <div class="maintext col-md-12 col-sm-12 mt-5">
+                <p>{{ article.conclusion }}</p>
+                <hr>
+            </div>
+                </div>
+            <div class="col-md-4 col-sm-12 mt-5">
+            <ul class="sidebarul">
+                <li><a class="sidebar" href="#">Другие статьи по теме</a></li>
+                <li><a class="sidebar" href="#">На главную</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-12 sm-12">
+            {% if not current_user.is_authenticated %}
+                <p class="warning">Авторизаруйтесь, если хотите оставить комментарий!</p>
+            {% endif %}
+            <p>Оставьте комментарий</p>
+            <div class="col-md-12 sm-12">
+                <form id="form"  action="{{ url_for('article.current_article', slug=article.slug) }}" method="post" class="form-control-sm-12">
+                    {% for field in form %}
+                        <div class="col-md-6 col-sm-12">
+                            {{ field() }}
+                        </div>
+                    {% endfor %}
+                    <div class="col-md-12 col-sm-12 mb-5">
+                        <p><button type="submit" class="btn btn-success">Отправить</button></p>
+                    </div>
+                </form>
+            </div>
+            <hr>
+
+            <div class="col-md-12 col-sm-12 comment">
+                {% for com in commentaries %}
+                    <p class="username">{{ com.user_name }}</p>
+                    <p>{{ com.content }}</p>
+                <div class="col-md-4"><hr></div>
+
+                {% endfor %}
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+</main>
+{% endblock %}

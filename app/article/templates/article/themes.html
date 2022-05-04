@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+    Разделы
+{% endblock %}
+
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row">
+        <div class="mb-5">
+        {% for t in themes %}
+            {% if t.name == 'News' %}
+                <div class="col-md-6 col-sm-12">
+                    <h2 class="mt-5"><a class="themetitle" href="#">{{ t.name }}</a></h2>
+                    <a href="#"><img class="themeimg" src="../static/media/news.jpeg"></a>
+                </div>
+            {% endif %}
+
+            {% if t.name == 'Post-Hardcore' %}
+                <div class="col-md-6 col-sm-12">
+                    <h2 class="mt-5"><a class="themetitle" href="#">{{ t.name }}</a></h2>
+                    <a href="#"><img class="themeimg" src="../static/media/posthardcore.jpeg"></a>
+                </div>
+            {% endif %}
+
+            {% if t.name == 'Metalcore' %}
+                <div class="col-md-6 col-sm-12">
+                    <h2 class="mt-5 "><a class="themetitle" href="#">{{ t.name }}</a></h2>
+                    <a href="#"><img class="themeimg" src="../static/media/metalcore.jpeg"></a>
+                </div>
+            {% endif %}
+
+            {% if t.name == 'Deathcore' %}
+                <div class="col-md-6 col-sm-12">
+                    <h2 class="mt-5"><a class="themetitle" href="#">{{ t.name }}</a></h2>
+                    <a href="#"><img class="themeimg" src="../static/media/deathcore.jpeg"></a>
+                </div>
+            {% endif %}
+        {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

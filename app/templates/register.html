@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+    Регистрация
+{% endblock %}
+
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-3 col-sm-12 offset-md-5 register">
+            <form class="form-signin" method="POST" action="/register">
+                <div class="col-md-12 col-sm-12 offset-md-1">
+                    <h2 class="form-signin-heading">Регистрация</h2>
+                </div>
+                {% for field in form %}
+                    {{ field.label() }}
+                    <div>{{ field(class="form-control") }}</div>
+                {% endfor %}
+                <div class="col-md-12 col-sm-12 offset-md-4">
+                    <button class=" mb-5 mt-2" type="submit">Sign Up</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

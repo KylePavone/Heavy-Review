@@ -1,0 +1,230 @@
+.page{
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #fff;
+    color: #fff;
+}
+
+.footer{
+    margin-top: auto;
+    background: rgb(26, 24, 24);
+}
+
+.cpr{
+    color: #fff;
+    text-align: center;
+}
+
+.ttl:first-child{
+    text-align: center;
+    font-size: 62px;
+    color: #fff;
+    -webkit-text-stroke: 2px black;
+    text-shadow: 4px 4px 4px #000;
+}
+.ttl:nth-child(2){
+    text-align: center;
+    font-size: 44px;
+    color: #fff;
+    -webkit-text-stroke: 2px black;
+    text-shadow: 4px 4px 4px #000;
+}
+
+.ttl:nth-child(3){
+    text-align: center;
+    color: #fff;
+}
+
+.ttl:nth-child(4){
+    text-align: center;
+    color: #fff;
+}
+
+.ttl:nth-child(5){
+    text-align: center;
+    color: #fff;
+}
+
+.ttl:nth-child(6){
+    text-align: center;
+    color: #fff;
+}
+
+.theme{
+    text-align: center;
+    font-size: 32px;
+}
+
+.ttl a{
+    color: rgb(46, 43, 45);
+    font-size: 32px;
+    color: #fff;
+    -webkit-text-stroke: 2px black;
+    text-decoration: none;
+    text-shadow: 4px 4px 4px #000;
+}
+
+.ttl a:hover{
+    color: red;
+}
+
+.titleimg{
+    width: 370px;
+    height: 200px;
+}
+
+.firstimg{
+    width: 500px;
+    height: 200px;
+}
+
+.innerimg{
+    width: 100%;
+    height: 100%;
+}
+
+.sidebarul{
+    list-style-type: none;
+}
+
+.sidebarul a{
+    font-size: 26px;
+    color: red;
+    -webkit-text-stroke: 1px #000;
+}
+
+.sidebarul a:hover{
+    color: #fff;
+}
+
+.youtube{
+    width: 100%;
+}
+
+.tags{
+    text-decoration: none;
+    font-size: 24px;
+    color: #fff;
+    background-color: #ff033e;
+    border-radius: 2px;
+}
+
+.tags:hover{
+    background-color: #fff;
+    color: #ff033e;
+}
+
+.wholetitle{
+
+    -webkit-text-stroke: 0.3px black;
+}
+
+.maintext{
+    font-size: 20px;
+}
+
+.warning{
+    font-size: 18px;
+    color: #ff0038;
+}
+
+.comment{
+
+
+}
+
+.username{
+    text-decoration: underline;
+    font-size: 24px;
+    font-family: bold;
+}
+
+.sidebar{
+
+}
+
+.wallp{
+    width: 100%;
+    height: 100%;
+}
+
+.metalcore{
+    background-image: url("../media/wp.jpeg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.pagin{
+    font-size: 26px;
+    letter-spacing: 0.5em;
+    text-decoration: none;
+    color: #fff;
+    text-shadow: 4px 4px 4px #000;
+}
+
+.pagin:hover{
+    color: red;
+    -webkit-text-stroke: 0.7px black;
+    text-shadow: 4px 4px 4px #000;
+    text-decoration: underline;
+}
+
+.titleel a:hover{
+    color: red;
+}
+
+.titleel a{
+    color: #fff;
+    text-decoration: ;
+    -webkit-text-stroke: 2px black;
+    text-shadow: 4px 4px 4px #000;
+}
+
+.register{
+    border-radius: 15px;
+    background-color: #36454f;
+    color: #000;
+    -webkit-text-stroke: 0.2px red;
+}
+
+.subtitle{
+    text-shadow: 10px 10px 4px #000;
+}
+
+.login{
+    border-radius: 15px;
+    background-color: #36454f;
+    color: #000;
+    -webkit-text-stroke: 0.2px red
+}
+
+.themeimg{
+    width: 100%;
+    height: 100%;
+    box-shadow: 2px 5px 15px #fff;
+}
+
+.themeimg:hover{
+    opacity: 0.5;
+}
+
+.themetitle{
+    text-decoration: underline;
+    color: #fff;
+    -webkit-text-stroke: 2.3px #000;
+    text-shadow: 10px 10px 4px #000;
+}
+
+.themetitle:hover{
+    text-decoration: underline;
+    color: red;
+    -webkit-text-stroke: 2.3px #000;
+    text-shadow: 10px 10px 4px #000;
+}

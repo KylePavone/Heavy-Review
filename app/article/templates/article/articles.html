@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Статьи
+{% endblock %}
+
+{% block search %}
+<form class="d-flex" method="GET">
+              <input class="form-control me-2" type="search" placeholder="Найти" aria-label="Search" name="q"
+                     value="{{ request.args.get('q', '') }}">
+              <button class="btn btn-outline-warning" type="submit">Поиск</button>
+</form>
+{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-12 col-sm-12 mb-5">
+                {% for art in pages.items %}
+                    <h2 class="titleel"><a href="{{ url_for('article.current_article', slug=art.slug) }}">{{ art.title }}</a></h2>
+                    <p class="subtitle">{{ art.subtitle }}</p>
+                {% endfor %}
+        </div>
+    </div>
+
+<div class="col md-12 col-sm-12 offset-md-5 offset-sm-3">
+    <nav aria-label="...">
+        <ul class="pagination">
+            <li {% if not pages.has_prev %} class="page-item disabled pagback" {% endif %}>
+              <a class="pagin" href="./titles?page={{ pages.prev_num }}" tabindex="-1" aria-disabled="true"><</a>
+            </li >
+        {% for page in pages.iter_pages() %}
+            <li {% if page == pages.page %} class="page-item active" {% endif %} aria-current="page">
+              <a class="pagin" href="./titles?page={{ page }}">{{ page }}</a>
+            </li>
+        {% endfor %}
+
+           <li {% if not pages.has_next %} class="page-item disabled" {% endif %}>
+              <a class="pagin" href="./titles?page={{ pages.next_num }}" tabindex="-1" aria-disabled="true">></a>
+            </li >
+      </ul>
+    </nav>
+</div>
+</div>
+
+
+
+
+
+
+
+{% endblock %}

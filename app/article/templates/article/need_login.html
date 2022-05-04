@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+    <h2>Войдите, чтобы оставлять комментарии</h2>
+    <a href="{{ url_for('security.login') }}">Войти</a>
+{% endblock %}
