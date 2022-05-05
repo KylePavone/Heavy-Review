@@ -16,7 +16,7 @@
 
 <div class="page metalcore">
 <header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bar">
         <div class="container-fluid">
           <a class="navbar-brand" href="/">HeavyReview</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -35,7 +35,7 @@
                     <a class="nav-link" href="{{ url_for('article.themes') }}">Разделы</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">О сайте</a>
+                    <a class="nav-link" href="{{ url_for('about') }}">О сайте</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ url_for('register') }}">Зарегистрироваться</a>
