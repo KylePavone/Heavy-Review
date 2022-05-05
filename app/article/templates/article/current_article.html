@@ -22,30 +22,44 @@
                     </div>
                 {% endfor %}
             </div>
+            {% if article.third_image %}
             <div class="col-md-12 col-sm-12">
                 <img class="innerimg" src="{{ article.first_image }}" alt="">
             </div>
+            {% endif %}
+            {% if article.first_chapter %}
             <div class="maintext col-md-12 col-sm-12 mt-5">
                 {{ article.first_chapter }}
             </div>
+            {% endif %}
+            {% if article.third_image %}
             <div class="col-md-12 col-sm-12 mt-5">
                 <img class="innerimg" src="{{ article.third_image }}" alt="">
             </div>
+            {% endif %}
+            {% if article.second_chapter %}
             <div class="maintext col-md-12 col-sm-12 mt-5">
                 <p>{{ article.second_chapter }}</p>
             </div>
+            {% endif %}
+            {% if article.video %}
             <div class="col-md-12 mb-5 mt-5 col-sm-12 mt-5 ">
               <iframe class="youtube" height="310px" src="{{ article.video }}"
               title="YouTube video player" frameborder="0" allow="accelerometer; autoplay;
               clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
+            {% endif %}
+            {% if article.third_chapter %}
             <div class="maintext col-md-12 col-sm-12 mt-5">
                 <p>{{ article.third_chapter }}</p>
             </div>
+            {% endif %}
+            {% if article.conclusion %}
             <div class="maintext col-md-12 col-sm-12 mt-5">
                 <p>{{ article.conclusion }}</p>
                 <hr>
             </div>
+            {% endif %}
         </div>
     </div>
 </div>

@@ -230,3 +230,13 @@
 .about{
     font-size: 24px;
 }
+
+.user{
+    -webkit-text-stroke: 0.6px #000;
+    text-decoration: underline;
+    text-shadow: 10px 1px 3px #000;
+}
+
+.user:hover{
+    cursor: pointer;
+}

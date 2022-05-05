@@ -47,6 +47,10 @@
                   </li>
                 {% endif %}
 
+                 <li class="nav-item">
+                    <a class="nav-link user">{{ current_user.name}}</a>
+                 </li>
+
                 {% if current_user.has_role('user') or current_user.has_role('admin') %}
                   <li class="nav-item">
                     <a class="nav-link" href="{{ url_for('security.logout') }}">Выход</a>
@@ -58,6 +62,7 @@
                 <a class="nav-link" href="#">Админ</a>
               </li>
             {% endif %}
+
             </ul>
             {% block search %}
 
