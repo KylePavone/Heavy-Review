@@ -8,3 +8,6 @@ app.register_blueprint(articles, url_prefix='/main')
 
 if __name__ == '__main__':
     app.run()
+
+
+
