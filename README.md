@@ -1,5 +1,5 @@
 # Heavy-Review
-Web-resource for those who love core music
+Web-resource for those who love core music.
 
 This is a blog-like website with authorization system where logged users have possibility to leave a comment.
 
